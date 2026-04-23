@@ -35,20 +35,41 @@ export default function LandingPage() {
     );
 
   return (
-    <main className="min-h-screen bg-[#f5f1f7] flex items-center justify-center p-4">
-      <div className="relative w-full max-w-5xl">
+    <main
+      style={{
+        minHeight: '100vh',
+        background: '#f5f1f7',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '16px',
+      }}
+    >
+      <div
+        style={{
+          position: 'relative',
+          width: '100%',
+          maxWidth: '1000px',
+        }}
+      >
         <img
           src={imageSrc}
           alt="Landing"
-          className="w-full rounded-2xl shadow-xl"
+          style={{
+            width: '100%',
+            display: 'block',
+            borderRadius: '16px',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+          }}
         />
 
         <a
           href={kakaoLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute"
+          aria-label="KakaoTalk"
           style={{
+            position: 'absolute',
             left: '7.8%',
             top: '84.9%',
             width: '41.1%',
@@ -58,8 +79,9 @@ export default function LandingPage() {
 
         <a
           href={emailLink}
-          className="absolute"
+          aria-label="Email"
           style={{
+            position: 'absolute',
             left: '50.2%',
             top: '84.9%',
             width: '41.2%',
@@ -70,5 +92,3 @@ export default function LandingPage() {
     </main>
   );
 }
-// deploy
-// redeploy
